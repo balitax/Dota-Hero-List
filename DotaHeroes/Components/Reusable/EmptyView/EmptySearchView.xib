@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptySearchView" customModule="DotaHeroes" customModuleProvider="target">
+            <connections>
+                <outlet property="imageLogo" destination="LPY-dB-uLC" id="Gt5-Zi-dQ7"/>
+                <outlet property="querySearchWording" destination="PQy-DD-A9q" id="YSa-23-Ce8"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dR5-JB-tox"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="257"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9K-JV-wbr">
+                    <rect key="frame" x="0.0" y="73" width="250" height="111"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tray" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LPY-dB-uLC">
+                            <rect key="frame" x="75" y="1.5" width="100" height="76.5"/>
+                            <color key="tintColor" red="0.91372549020000005" green="0.1843137255" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="W2V-Ai-4DM"/>
+                                <constraint firstAttribute="width" constant="100" id="wlO-5U-urr"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATA NOT FOUND" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQy-DD-A9q">
+                            <rect key="frame" x="63.5" y="94" width="123.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <color key="textColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="LPY-dB-uLC" firstAttribute="top" secondItem="z9K-JV-wbr" secondAttribute="top" id="EJX-xv-OOr"/>
+                        <constraint firstItem="PQy-DD-A9q" firstAttribute="top" secondItem="LPY-dB-uLC" secondAttribute="bottom" constant="14" id="Izn-XC-fZa"/>
+                        <constraint firstItem="PQy-DD-A9q" firstAttribute="centerX" secondItem="LPY-dB-uLC" secondAttribute="centerX" id="SJI-yd-dfa"/>
+                        <constraint firstAttribute="bottom" secondItem="PQy-DD-A9q" secondAttribute="bottom" id="dVQ-DI-lcB"/>
+                        <constraint firstItem="LPY-dB-uLC" firstAttribute="centerX" secondItem="z9K-JV-wbr" secondAttribute="centerX" id="faJ-aX-sbn"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="z9K-JV-wbr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HMQ-DI-bF9"/>
+                <constraint firstItem="z9K-JV-wbr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IWx-Cl-k0w"/>
+                <constraint firstAttribute="trailing" secondItem="z9K-JV-wbr" secondAttribute="trailing" id="nwd-p6-sWC"/>
+                <constraint firstItem="z9K-JV-wbr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="px4-22-Pns"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="17.39130434782609" y="64.620535714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tray" catalog="system" width="128" height="88"/>
+    </resources>
+</document>

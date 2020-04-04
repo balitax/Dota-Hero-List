@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroListsUI" customModule="DotaHeroes" customModuleProvider="target">
+            <connections>
+                <outlet property="sortButton" destination="IvL-OG-T62" id="Min-L4-oCs"/>
+                <outlet property="tableView" destination="hF7-gB-CXu" id="rig-kb-Cd4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hF7-gB-CXu">
+                    <rect key="frame" x="0.0" y="88" width="414" height="718"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dH-PS-9ix" customClass="GSView" customModule="DotaHeroes" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="806" width="414" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvL-OG-T62">
+                            <rect key="frame" x="14" y="8" width="386" height="44"/>
+                            <color key="backgroundColor" red="0.91372549020000005" green="0.1843137255" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <state key="normal" title="SORT">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="didSortHeroes:" destination="-1" eventType="touchUpInside" id="cUe-Ya-ihx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IvL-OG-T62" secondAttribute="trailing" constant="14" id="0TF-Ej-Brk"/>
+                        <constraint firstItem="IvL-OG-T62" firstAttribute="top" secondItem="8dH-PS-9ix" secondAttribute="top" constant="8" id="9kj-QB-G3I"/>
+                        <constraint firstItem="IvL-OG-T62" firstAttribute="leading" secondItem="8dH-PS-9ix" secondAttribute="leading" constant="14" id="pO8-qX-eXI"/>
+                        <constraint firstAttribute="height" constant="90" id="rmC-QE-1cv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.85490196080000003" green="0.85490196080000003" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                            <point key="value" x="1" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8dH-PS-9ix" firstAttribute="top" secondItem="hF7-gB-CXu" secondAttribute="bottom" id="0Vr-aE-XTp"/>
+                <constraint firstItem="LgL-QW-oiK" firstAttribute="bottom" secondItem="IvL-OG-T62" secondAttribute="bottom" constant="4" id="4jr-9F-3W8"/>
+                <constraint firstItem="LgL-QW-oiK" firstAttribute="trailing" secondItem="hF7-gB-CXu" secondAttribute="trailing" id="8Ei-T9-hpU"/>
+                <constraint firstItem="8dH-PS-9ix" firstAttribute="leading" secondItem="LgL-QW-oiK" secondAttribute="leading" id="G7M-oe-UF0"/>
+                <constraint firstItem="LgL-QW-oiK" firstAttribute="trailing" secondItem="8dH-PS-9ix" secondAttribute="trailing" id="NLh-Ru-V1O"/>
+                <constraint firstAttribute="bottom" secondItem="8dH-PS-9ix" secondAttribute="bottom" id="h49-zq-rpE"/>
+                <constraint firstItem="hF7-gB-CXu" firstAttribute="top" secondItem="LgL-QW-oiK" secondAttribute="top" id="md9-n5-Hej"/>
+                <constraint firstItem="hF7-gB-CXu" firstAttribute="leading" secondItem="LgL-QW-oiK" secondAttribute="leading" id="pLG-mV-5WU"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="LgL-QW-oiK"/>
+            <variation key="heightClass=regular-widthClass=compact" insetsLayoutMarginsFromSafeArea="YES"/>
+            <point key="canvasLocation" x="33.333333333333336" y="54.241071428571423"/>
+        </view>
+    </objects>
+</document>
