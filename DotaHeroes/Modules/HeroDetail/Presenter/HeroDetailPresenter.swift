@@ -34,7 +34,22 @@ class HeroDetailPresenter {
 
 extension HeroDetailPresenter: HeroDetailPresentation {
     
-    func viewDidLoad() {  }
+    var navigationTitle: String! {
+        return viewModel.hero?.localizedName ?? ""
+    }
+    
+    func numberOfSection() -> Int {
+        viewModel.items.count
+    }
+    
+    func numberOfRow(in section: Int) -> Int {
+        print("JUMLAH ", viewModel.items[section].count)
+        return viewModel.items[section].count
+    }
+    
+    func item(at indexPath: IndexPath) -> CellRepresentable {
+        viewModel.getItem(at: indexPath)
+    }
     
 }
 

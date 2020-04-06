@@ -30,6 +30,7 @@ class HeroListsUI: UIViewController {
         setupTableViewComponent()
         self.navigationItem.title = "DOTA HERO"
         
+        presenter.listenLocalData()
         presenter.fetchHeroList()
         
     }
@@ -79,7 +80,7 @@ extension HeroListsUI: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.pushDetailHero(self.roleHeroes)
+        presenter.pushDetailHero(indexPath)
     }
     
 }
@@ -87,6 +88,7 @@ extension HeroListsUI: UITableViewDelegate, UITableViewDataSource {
 extension HeroListsUI: HeroListsView, SortViewDelegate {
     
     func didSortHero(by role: String) {
+        self.navigationItem.title = role
         presenter.filterHeroByRoles(role)
     }
     
@@ -96,6 +98,8 @@ extension HeroListsUI: HeroListsView, SortViewDelegate {
             
             self.tableView.reloadData()
             self.tableView.backgroundView = self.emptyView
+            self.sortButton.enableButton()
+            self.refreshControll.endRefreshing()
             
             let alertAction = UIAlertAction(title: "OK", style: .destructive) { _ in
                 
@@ -108,6 +112,7 @@ extension HeroListsUI: HeroListsView, SortViewDelegate {
             self.refreshControll.endRefreshing()
         case .empty:
             self.tableView.reloadData()
+            self.refreshControll.endRefreshing()
             self.tableView.backgroundView = self.emptyView
         default:
             break

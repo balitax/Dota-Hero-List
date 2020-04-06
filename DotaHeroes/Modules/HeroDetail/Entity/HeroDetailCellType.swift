@@ -9,5 +9,7 @@
 import Foundation
 
 enum HeroDetailCellType: String {
-    case list = ""
+    case heroImage = "HeaderComponentTableViewCell"
+    case heroComponent = "HeroComponentsTableViewCell"
+    case heroSimiliar = "DotaHeroListsTableViewCell"
 }

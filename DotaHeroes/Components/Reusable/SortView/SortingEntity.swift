@@ -17,14 +17,12 @@ class SortingEntity {
     var userDefault = UserDefaults.standard
     
     func saveSortingEntity(value: String) {
-        print("SIMPAN ", value)
         userDefault.set(value, forKey: keySort)
         userDefault.synchronize()
     }
     
     func getSortingEntity(key: String) -> String {
         let data = userDefault.object(forKey: keySort)
-        print("GET ", data as? String)
         if data != nil {
             return data as! String
         } else {

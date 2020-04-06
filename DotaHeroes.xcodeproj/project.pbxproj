@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FAD7A712439B2B40004037C /* HeroStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD7A702439B2B40004037C /* HeroStorage.swift */; };
+		2FAD7A7F2439CD840004037C /* HeaderComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD7A7D2439CD840004037C /* HeaderComponentTableViewCell.swift */; };
+		2FAD7A802439CD840004037C /* HeaderComponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD7A7E2439CD840004037C /* HeaderComponentTableViewCell.xib */; };
 		2FC7A23A2438BD0000C68BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7A2392438BD0000C68BB6 /* Assets.xcassets */; };
 		2FC7A23D2438BD0000C68BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7A23B2438BD0000C68BB6 /* LaunchScreen.storyboard */; };
 		2FC7A2482438BD0000C68BB6 /* DotaHeroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7A2472438BD0000C68BB6 /* DotaHeroesTests.swift */; };
 		2FC7A2532438BD0000C68BB6 /* DotaHeroesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7A2522438BD0000C68BB6 /* DotaHeroesUITests.swift */; };
 		2FC7A2802438BDBD00C68BB6 /* Databaseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7A2612438BDBD00C68BB6 /* Databaseable.swift */; };
-		2FC7A2832438BDBE00C68BB6 /* MovieStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7A2672438BDBD00C68BB6 /* MovieStorage.swift */; };
 		2FC7A2862438BDBE00C68BB6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7A26B2438BDBD00C68BB6 /* Constant.swift */; };
 		2FC7A2872438BDBE00C68BB6 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7A26C2438BDBD00C68BB6 /* APIConfiguration.swift */; };
 		2FC7A2882438BDBE00C68BB6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7A26D2438BDBD00C68BB6 /* APIClient.swift */; };
@@ -49,6 +51,10 @@
 		2FC7A2C82438DB9600C68BB6 /* ListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7A2C62438DB9600C68BB6 /* ListItemTableViewCell.xib */; };
 		2FC7A2CE2438DF7700C68BB6 /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC7A2CC2438DF7700C68BB6 /* SortView.swift */; };
 		2FC7A2CF2438DF7700C68BB6 /* SortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC7A2CD2438DF7700C68BB6 /* SortView.xib */; };
+		2FC84AA9243B7CB5002EEF2D /* HeaderComponentTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC84AA8243B7CB5002EEF2D /* HeaderComponentTableViewCellViewModel.swift */; };
+		2FC84AAC243B826F002EEF2D /* HeroComponentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC84AAA243B826F002EEF2D /* HeroComponentsTableViewCell.swift */; };
+		2FC84AAD243B826F002EEF2D /* HeroComponentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC84AAB243B826F002EEF2D /* HeroComponentsTableViewCell.xib */; };
+		2FC84AAF243B82E6002EEF2D /* HeroComponentsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC84AAE243B82E6002EEF2D /* HeroComponentsTableViewCellViewModel.swift */; };
 		2FF648A62438E3DC00735294 /* SortingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF648A52438E3DC00735294 /* SortingEntity.swift */; };
 		2FF648B92438EAC600735294 /* HeroDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF648AB2438EAC600735294 /* HeroDetailUI.swift */; };
 		2FF648BA2438EAC600735294 /* HeroDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF648AC2438EAC600735294 /* HeroDetailUI.xib */; };
@@ -87,6 +93,9 @@
 		0B80F84841D779960976A11E /* Pods-DotaHeroesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaHeroesTests.release.xcconfig"; path = "Target Support Files/Pods-DotaHeroesTests/Pods-DotaHeroesTests.release.xcconfig"; sourceTree = "<group>"; };
 		24884531AFE9ED822E3FB1E5 /* Pods_DotaHeroesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaHeroesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C95862B2894F536E5E1C01 /* Pods-DotaHeroes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaHeroes.debug.xcconfig"; path = "Target Support Files/Pods-DotaHeroes/Pods-DotaHeroes.debug.xcconfig"; sourceTree = "<group>"; };
+		2FAD7A702439B2B40004037C /* HeroStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroStorage.swift; sourceTree = "<group>"; };
+		2FAD7A7D2439CD840004037C /* HeaderComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponentTableViewCell.swift; sourceTree = "<group>"; };
+		2FAD7A7E2439CD840004037C /* HeaderComponentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderComponentTableViewCell.xib; sourceTree = "<group>"; };
 		2FC7A22D2438BCFB00C68BB6 /* DotaHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC7A2392438BD0000C68BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FC7A23C2438BD0000C68BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +107,6 @@
 		2FC7A2522438BD0000C68BB6 /* DotaHeroesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaHeroesUITests.swift; sourceTree = "<group>"; };
 		2FC7A2542438BD0000C68BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FC7A2612438BDBD00C68BB6 /* Databaseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Databaseable.swift; sourceTree = "<group>"; };
-		2FC7A2672438BDBD00C68BB6 /* MovieStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieStorage.swift; sourceTree = "<group>"; };
 		2FC7A26B2438BDBD00C68BB6 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2FC7A26C2438BDBD00C68BB6 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		2FC7A26D2438BDBD00C68BB6 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -135,6 +143,10 @@
 		2FC7A2C62438DB9600C68BB6 /* ListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemTableViewCell.xib; sourceTree = "<group>"; };
 		2FC7A2CC2438DF7700C68BB6 /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
 		2FC7A2CD2438DF7700C68BB6 /* SortView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortView.xib; sourceTree = "<group>"; };
+		2FC84AA8243B7CB5002EEF2D /* HeaderComponentTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponentTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		2FC84AAA243B826F002EEF2D /* HeroComponentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroComponentsTableViewCell.swift; sourceTree = "<group>"; };
+		2FC84AAB243B826F002EEF2D /* HeroComponentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroComponentsTableViewCell.xib; sourceTree = "<group>"; };
+		2FC84AAE243B82E6002EEF2D /* HeroComponentsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroComponentsTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		2FF648A52438E3DC00735294 /* SortingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingEntity.swift; sourceTree = "<group>"; };
 		2FF648AB2438EAC600735294 /* HeroDetailUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailUI.swift; sourceTree = "<group>"; };
 		2FF648AC2438EAC600735294 /* HeroDetailUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroDetailUI.xib; sourceTree = "<group>"; };
@@ -191,6 +203,19 @@
 				24884531AFE9ED822E3FB1E5 /* Pods_DotaHeroesTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2FAD7A742439C9B70004037C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2FAD7A7D2439CD840004037C /* HeaderComponentTableViewCell.swift */,
+				2FAD7A7E2439CD840004037C /* HeaderComponentTableViewCell.xib */,
+				2FC84AA8243B7CB5002EEF2D /* HeaderComponentTableViewCellViewModel.swift */,
+				2FC84AAA243B826F002EEF2D /* HeroComponentsTableViewCell.swift */,
+				2FC84AAB243B826F002EEF2D /* HeroComponentsTableViewCell.xib */,
+				2FC84AAE243B82E6002EEF2D /* HeroComponentsTableViewCellViewModel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		2FC7A2242438BCFB00C68BB6 = {
@@ -270,7 +295,7 @@
 		2FC7A2662438BDBD00C68BB6 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				2FC7A2672438BDBD00C68BB6 /* MovieStorage.swift */,
+				2FAD7A702439B2B40004037C /* HeroStorage.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -452,6 +477,7 @@
 		2FF648AA2438EAC600735294 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2FAD7A742439C9B70004037C /* Components */,
 				2FF648AB2438EAC600735294 /* HeroDetailUI.swift */,
 				2FF648AC2438EAC600735294 /* HeroDetailUI.xib */,
 			);
@@ -633,8 +659,10 @@
 			files = (
 				2FC7A2CF2438DF7700C68BB6 /* SortView.xib in Resources */,
 				2FC7A23D2438BD0000C68BB6 /* LaunchScreen.storyboard in Resources */,
+				2FAD7A802439CD840004037C /* HeaderComponentTableViewCell.xib in Resources */,
 				2FC7A23A2438BD0000C68BB6 /* Assets.xcassets in Resources */,
 				2FF648BA2438EAC600735294 /* HeroDetailUI.xib in Resources */,
+				2FC84AAD243B826F002EEF2D /* HeroComponentsTableViewCell.xib in Resources */,
 				2FF648C82438ECDE00735294 /* EmptySearchView.xib in Resources */,
 				2FC7A2C82438DB9600C68BB6 /* ListItemTableViewCell.xib in Resources */,
 				2FC7A2AC2438BE6C00C68BB6 /* HeroListsUI.xib in Resources */,
@@ -778,8 +806,10 @@
 				2FC7A2912438BDBE00C68BB6 /* CellConfigurable.swift in Sources */,
 				2FC7A2982438BDBE00C68BB6 /* ViewStateKind.swift in Sources */,
 				2FC7A28F2438BDBE00C68BB6 /* UITableView+Extensions.swift in Sources */,
+				2FAD7A7F2439CD840004037C /* HeaderComponentTableViewCell.swift in Sources */,
 				2FF648BE2438EAC600735294 /* HeroDetailViewModel.swift in Sources */,
 				2FC7A2AD2438BE6C00C68BB6 /* HeroListsUI.swift in Sources */,
+				2FC84AA9243B7CB5002EEF2D /* HeaderComponentTableViewCellViewModel.swift in Sources */,
 				2FC7A2972438BDBE00C68BB6 /* DataSource.swift in Sources */,
 				2FC7A2942438BDBE00C68BB6 /* PresentableView.swift in Sources */,
 				2FC7A2862438BDBE00C68BB6 /* Constant.swift in Sources */,
@@ -788,14 +818,16 @@
 				2FC7A2CE2438DF7700C68BB6 /* SortView.swift in Sources */,
 				2FC7A2872438BDBE00C68BB6 /* APIConfiguration.swift in Sources */,
 				2FC7A28B2438BDBE00C68BB6 /* UIImageView+Extensions.swift in Sources */,
+				2FC84AAF243B82E6002EEF2D /* HeroComponentsTableViewCellViewModel.swift in Sources */,
 				2FF648A62438E3DC00735294 /* SortingEntity.swift in Sources */,
 				2FC7A2B32438BE6C00C68BB6 /* HeroListsInteractor.swift in Sources */,
+				2FAD7A712439B2B40004037C /* HeroStorage.swift in Sources */,
 				2FC7A2962438BDBE00C68BB6 /* CellRepresentable.swift in Sources */,
 				2FC7A2B22438BE6C00C68BB6 /* HeroListsPresenter.swift in Sources */,
+				2FC84AAC243B826F002EEF2D /* HeroComponentsTableViewCell.swift in Sources */,
 				2FC7A2952438BDBE00C68BB6 /* HasApply.swift in Sources */,
 				2FC7A2B12438BE6C00C68BB6 /* HeroListsViewModel.swift in Sources */,
 				2FF648BF2438EAC600735294 /* HeroDetailPresenter.swift in Sources */,
-				2FC7A2832438BDBE00C68BB6 /* MovieStorage.swift in Sources */,
 				2FC7A2B82438C46B00C68BB6 /* DotaHeroListsTableViewCell.swift in Sources */,
 				2FC7A2932438BDBE00C68BB6 /* AlertableView.swift in Sources */,
 				2FC7A2C72438DB9600C68BB6 /* ListItemTableViewCell.swift in Sources */,

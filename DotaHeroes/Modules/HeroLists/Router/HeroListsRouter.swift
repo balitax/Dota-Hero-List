@@ -60,11 +60,12 @@ extension HeroListsRouter: HeroListsWireframe {
         }
     }
     
-    func pushDetailHero(_ data: [String], from view: PresentableView) {
-        let detail = HeroDetailRouter.assembleModule()
+    func pushDetailHero(_ data: HeroStorage, similiar: [HeroStorage], from view: PresentableView) {
+        let detail = HeroDetailRouter.assembleModule(data, similiar: similiar)
         if let navigationController = view.presentedViewController() as? UINavigationController {
             navigationController.pushViewController(detail, animated: true)
         }
     }
+    
     
 }

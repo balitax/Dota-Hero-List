@@ -9,5 +9,5 @@
 import Foundation
 
 enum HeroListsCellType: String {
-    case list = ""
+    case list = "DotaHeroListsTableViewCell"
 }

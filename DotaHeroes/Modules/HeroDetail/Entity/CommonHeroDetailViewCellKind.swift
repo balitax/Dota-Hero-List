@@ -9,5 +9,7 @@
 import Foundation
 
 enum CommonHeroDetailViewCellKind {
-    case list
+    case heroImage
+    case heroComponent
+    case heroSimiliar
 }

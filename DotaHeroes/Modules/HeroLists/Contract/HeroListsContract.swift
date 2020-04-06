@@ -21,23 +21,25 @@ protocol HeroListsPresentation: DataSource {
     var interactor: HeroListsUseCase! { get set }
     var router: HeroListsWireframe! { get set }
     
+    func listenLocalData()
     func fetchHeroList()
     func presentHeroSort(_ data: [String], delegate: SortViewDelegate)
     func filterHeroByRoles(_ roles: String)
-    func pushDetailHero(_ data: [String])
+    func pushDetailHero(_ indexPath: IndexPath)
     
 }
 
 protocol HeroListsUseCase: class {
     // TODO: Declare use case methods
     var output: HeroListsInteractorOutput! { get set }
+    
     func fetchHeroList()
 }
 
 protocol HeroListsInteractorOutput: class {
     // TODO: Declare interactor output methods
     func onError(error: Error)
-    func onHeroSuccess(_ data: [Hero])
+    func onHeroSuccess()
 }
 
 protocol HeroListsWireframe: class {
@@ -45,6 +47,6 @@ protocol HeroListsWireframe: class {
     var viewController: UIViewController? { get set }
     static func assembleModule() -> UIViewController
     func showSortUI(_ data: [String], delegate: SortViewDelegate, from view: PresentableView)
-    func pushDetailHero(_ data: [String], from view: PresentableView)
+    func pushDetailHero(_ data: HeroStorage, similiar: [HeroStorage], from view: PresentableView)
 }
 

@@ -84,4 +84,10 @@ class APIClient {
         }
     }
     
+    static func deleteLocalDatabase<T: Object>(_ object: T.Type) {
+        if let data = Database.shared.get(type: object.self) {
+            Database.shared.delete(objects: data)
+        }
+    }
+    
 }

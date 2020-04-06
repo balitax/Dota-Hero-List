@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 
 /// HeroListsPresenter
@@ -60,7 +61,7 @@ extension HeroListsPresenter: HeroListsPresentation {
             viewModel.heroes = viewModel.tempHeroes
         } else {
             let filter = viewModel.tempHeroes.filter ({
-                ($0.roles?.contains(where: { $0 == roles }) ?? false)
+                ($0.roles.contains(where: { $0 == roles }) )
             })
             viewModel.heroes = filter
         }
@@ -74,37 +75,56 @@ extension HeroListsPresenter: HeroListsPresentation {
         
     }
     
-    func pushDetailHero(_ data: [String]) {
-        router.pushDetailHero(data, from: view)
+    func pushDetailHero(_ indexPath: IndexPath) {
+        let getCurrentHeroRoles = viewModel.heroes[indexPath.row].roles
+        let getCurrentHeroId = viewModel.heroes[indexPath.row].id
+        
+        let getSimiliarHeroes = viewModel.heroes.filter({
+            let rolesArray = Array($0.roles)
+            let similiarArray = rolesArray.containsSameElements(as: Array(getCurrentHeroRoles))
+            return similiarArray
+        })
+        
+        let filterSimiliarHeroes = getSimiliarHeroes.filter( {
+            $0.id != getCurrentHeroId
+        })
+        
+        router.pushDetailHero(viewModel.heroes[indexPath.row], similiar: filterSimiliarHeroes, from: view)
+    }
+    
+    func listenLocalData() {
+        if let data = Database.shared.get(type: HeroStorage.self) {
+            
+            viewModel.heroes = Array(data)
+            viewModel.tempHeroes = Array(data)
+            viewModel.createItems()
+            
+            
+            // Fetch Roles
+            var theRoles = [String]()
+            theRoles.append("All")
+            
+            for roles in data {
+                theRoles += roles.roles
+            }
+            
+            theRoles.append("Empty")
+            
+            self.view.sortHeroesData(theRoles.removeDuplicates())
+        }
     }
     
 }
 
 extension HeroListsPresenter: HeroListsInteractorOutput {
     
-    func onHeroSuccess(_ data: [Hero]) {
-        viewModel.heroes = data
-        viewModel.tempHeroes = data
-        viewModel.createItems()
+    func onHeroSuccess() {
+        self.listenLocalData()
         self.view.configureView(with: .success)
-
-        // Fetch Roles
-        var theRoles = [String]()
-        theRoles.append("All")
-        
-        for roles in data {
-            if let herosRole = roles.roles {
-                theRoles += herosRole
-            }
-        }
-        
-         theRoles.append("Empty")
-        
-        self.view.sortHeroesData(theRoles.removeDuplicates())
-        
     }
     
     func onError(error: Error) {
+        self.listenLocalData()
         self.view.configureView(with: .error(description: error.localizedDescription))
     }
     

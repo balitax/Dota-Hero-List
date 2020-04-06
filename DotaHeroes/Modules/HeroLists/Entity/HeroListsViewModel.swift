@@ -10,8 +10,8 @@ import Foundation
 
 class HeroListsViewModel {
     
-    var heroes = [Hero]()
-    var tempHeroes = [Hero]()
+    var heroes = [HeroStorage]()
+    var tempHeroes = [HeroStorage]()
     
     private(set) var items: [[CommonHeroListsViewCellKind]] = []
     
@@ -31,7 +31,7 @@ class HeroListsViewModel {
                 heroImage: self.heroes[indexPath.row].img,
                 heroName: self.heroes[indexPath.row].localizedName,
                 heroAttackType: self.heroes[indexPath.row].attackType,
-                heroRoles: self.heroes[indexPath.row].roles)
+                heroRoles: Array(self.heroes[indexPath.row].roles))
         }
     }
     

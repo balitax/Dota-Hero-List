@@ -18,7 +18,7 @@ class HeroDetailRouter {
 
 extension HeroDetailRouter: HeroDetailWireframe {
     
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(_ hero: HeroStorage, similiar: [HeroStorage]) -> UIViewController {
         
         let view = HeroDetailUI()
         let viewModel = HeroDetailViewModel()
@@ -32,6 +32,8 @@ extension HeroDetailRouter: HeroDetailWireframe {
         router: router)
         
         view.presenter =  presenter
+        viewModel.hero = hero
+        viewModel.similiar = similiar
         
         presenter.view = view
         presenter.router = router

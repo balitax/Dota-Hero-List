@@ -157,7 +157,7 @@ open class Database: Databaseable {
         do {
             try database.write {
                 debugPrint(Array(objects).description)
-                database.add(objects, update: .all)
+                database.add(objects, update: .modified)
             }
         } catch(let e) {
             debugPrint(e.localizedDescription)
@@ -175,7 +175,7 @@ open class Database: Databaseable {
             do {
                 try database.write {
                     debugPrint(object.description)
-                    database.add(object, update: .all)
+                    database.add(object, update: .modified)
                     emitter(.success(object))
                 }
             } catch(let e) {
@@ -197,7 +197,7 @@ open class Database: Databaseable {
             do {
                 try database.write {
                     debugPrint(Array(objects).description)
-                    database.add(objects, update: .all)
+                    database.add(objects, update: .modified)
                     emitter(.success(objects))
                 }
             } catch(let e) {

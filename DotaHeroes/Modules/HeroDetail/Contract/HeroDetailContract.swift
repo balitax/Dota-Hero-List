@@ -13,13 +13,14 @@ protocol HeroDetailView: PresentableView {
     var presenter: HeroDetailPresentation! { get set }
 }
 
-protocol HeroDetailPresentation: class {
+protocol HeroDetailPresentation: DataSource {
     // TODO: Declare presentation methods
     var view: HeroDetailView! { get set }
     var interactor: HeroDetailUseCase! { get set }
     var router: HeroDetailWireframe! { get set }
     
-    func viewDidLoad()
+    var navigationTitle: String! { get }
+    
 }
 
 protocol HeroDetailUseCase: class {
@@ -34,6 +35,6 @@ protocol HeroDetailInteractorOutput: class {
 protocol HeroDetailWireframe: class {
     // TODO: Declare wireframe methods
     var viewController: UIViewController? { get set }
-    static func assembleModule() -> UIViewController
+    static func assembleModule(_ hero: HeroStorage, similiar: [HeroStorage]) -> UIViewController
 }
 
