@@ -14,7 +14,6 @@ class HeroDetailViewModel {
     var similiar = [HeroStorage]() {
         didSet {
             self.createItems()
-            print("SIMILI ", similiar)
         }
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HeroListsUI: UIViewController {
     
@@ -30,6 +31,10 @@ class HeroListsUI: UIViewController {
         setupTableViewComponent()
         self.navigationItem.title = "DOTA HERO"
         
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        self.navigationController?.navigationBar.barTintColor = .defaultTheme
+        
         presenter.listenLocalData()
         presenter.fetchHeroList()
         
@@ -49,7 +54,14 @@ class HeroListsUI: UIViewController {
     @objc func didPullRefresh(_ sender: UIRefreshControl) {
         self.sortButton.disableButton()
         SortingEntity.shared.removeAllEntity()
-        presenter.fetchHeroList()
+        
+        if Connectivity.isConnectedToInternet() {
+            presenter.fetchHeroList()
+        } else {
+            self.tableView.reloadWithAnimation()
+            self.refreshControll.endRefreshing()
+        }
+        
     }
     
     @IBAction func didSortHeroes(_ sender: UIButton) {
@@ -96,7 +108,7 @@ extension HeroListsUI: HeroListsView, SortViewDelegate {
         switch state {
         case .error(let error):
             
-            self.tableView.reloadData()
+            self.tableView.reloadWithAnimation()
             self.tableView.backgroundView = self.emptyView
             self.sortButton.enableButton()
             self.refreshControll.endRefreshing()
@@ -106,12 +118,12 @@ extension HeroListsUI: HeroListsView, SortViewDelegate {
             }
             self.showAlert(viewController: self, prefferedStyle: .alert, title: "Error!", message: error, alertActions: [alertAction])
         case .success:
-            self.tableView.reloadData()
+            self.tableView.reloadWithAnimation()
             self.tableView.backgroundView = nil
             self.sortButton.enableButton()
             self.refreshControll.endRefreshing()
         case .empty:
-            self.tableView.reloadData()
+           self.tableView.reloadWithAnimation()
             self.refreshControll.endRefreshing()
             self.tableView.backgroundView = self.emptyView
         default:

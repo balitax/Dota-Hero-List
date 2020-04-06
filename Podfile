@@ -6,10 +6,8 @@ target 'DotaHeroes' do
 
   # Pods for DotaHeroes
 
-  pod 'RxCocoa'
   pod 'RxSwift'
   pod 'Alamofire'
-  pod 'IQKeyboardManagerSwift'
   pod 'RealmSwift'
   pod "Kingfisher"
 

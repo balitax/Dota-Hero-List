@@ -67,7 +67,6 @@ enum APIRouter: APIConfiguration {
         headers?.forEach({ (key, value) in
             urlRequest.setValue(value, forHTTPHeaderField: key)
         })
-        print("URL ", urlRequest.url?.absoluteString ?? "")
         return try parameterEncoding.encode(urlRequest, with: parameters)
     }
     

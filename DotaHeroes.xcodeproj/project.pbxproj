@@ -55,6 +55,7 @@
 		2FC84AAC243B826F002EEF2D /* HeroComponentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC84AAA243B826F002EEF2D /* HeroComponentsTableViewCell.swift */; };
 		2FC84AAD243B826F002EEF2D /* HeroComponentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC84AAB243B826F002EEF2D /* HeroComponentsTableViewCell.xib */; };
 		2FC84AAF243B82E6002EEF2D /* HeroComponentsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC84AAE243B82E6002EEF2D /* HeroComponentsTableViewCellViewModel.swift */; };
+		2FC84AB9243B9447002EEF2D /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC84AB8243B9447002EEF2D /* Connectivity.swift */; };
 		2FF648A62438E3DC00735294 /* SortingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF648A52438E3DC00735294 /* SortingEntity.swift */; };
 		2FF648B92438EAC600735294 /* HeroDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF648AB2438EAC600735294 /* HeroDetailUI.swift */; };
 		2FF648BA2438EAC600735294 /* HeroDetailUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF648AC2438EAC600735294 /* HeroDetailUI.xib */; };
@@ -147,6 +148,7 @@
 		2FC84AAA243B826F002EEF2D /* HeroComponentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroComponentsTableViewCell.swift; sourceTree = "<group>"; };
 		2FC84AAB243B826F002EEF2D /* HeroComponentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroComponentsTableViewCell.xib; sourceTree = "<group>"; };
 		2FC84AAE243B82E6002EEF2D /* HeroComponentsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroComponentsTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		2FC84AB8243B9447002EEF2D /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		2FF648A52438E3DC00735294 /* SortingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingEntity.swift; sourceTree = "<group>"; };
 		2FF648AB2438EAC600735294 /* HeroDetailUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailUI.swift; sourceTree = "<group>"; };
 		2FF648AC2438EAC600735294 /* HeroDetailUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroDetailUI.xib; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				2FC7A2612438BDBD00C68BB6 /* Databaseable.swift */,
 				2FC7A2642438BDBD00C68BB6 /* Model */,
 				2FC7A26A2438BDBD00C68BB6 /* API */,
+				2FC84AB8243B9447002EEF2D /* Connectivity.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				2FC7A2982438BDBE00C68BB6 /* ViewStateKind.swift in Sources */,
 				2FC7A28F2438BDBE00C68BB6 /* UITableView+Extensions.swift in Sources */,
 				2FAD7A7F2439CD840004037C /* HeaderComponentTableViewCell.swift in Sources */,
+				2FC84AB9243B9447002EEF2D /* Connectivity.swift in Sources */,
 				2FF648BE2438EAC600735294 /* HeroDetailViewModel.swift in Sources */,
 				2FC7A2AD2438BE6C00C68BB6 /* HeroListsUI.swift in Sources */,
 				2FC84AA9243B7CB5002EEF2D /* HeaderComponentTableViewCellViewModel.swift in Sources */,

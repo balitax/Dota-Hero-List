@@ -24,6 +24,10 @@ class SortView: UIViewController {
         setupTableViewComponent()
         self.navigationItem.title = "HERO ROLES FILTER"
         
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
+        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        self.navigationController?.navigationBar.barTintColor = .white
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(self.dismissView))
         
     }

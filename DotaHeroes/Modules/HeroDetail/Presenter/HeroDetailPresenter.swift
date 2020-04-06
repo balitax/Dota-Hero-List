@@ -43,7 +43,6 @@ extension HeroDetailPresenter: HeroDetailPresentation {
     }
     
     func numberOfRow(in section: Int) -> Int {
-        print("JUMLAH ", viewModel.items[section].count)
         return viewModel.items[section].count
     }
     
